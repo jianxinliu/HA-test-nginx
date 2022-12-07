@@ -1,0 +1,9 @@
+<p>HHHH</p>
+<p id="aa"></p>
+
+<script>
+    fetch('http://localhost:8091/api/aa')
+    .then(async resp => {
+        document.getElementById('aa').innerText = await resp.text()
+    })
+</script>
