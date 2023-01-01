@@ -13,6 +13,10 @@ function createApp(port) {
         resp.send('aa: ' + getIp() + ":" + port)
     })
 
+    app1.post('bb', (req, resp) => {
+        resp.send(req.body.name)
+    })
+
     app1.listen(port);
 
     console.log(`lisen on : ${port}`);

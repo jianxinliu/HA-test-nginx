@@ -2,8 +2,18 @@
 <p id="aa"></p>
 
 <script>
-    fetch('http://localhost:8091/api/aa')
+    fetch('http://localhost:8090/api/bb', {name: 'hah'})
+    
     .then(async resp => {
         document.getElementById('aa').innerText = await resp.text()
     })
+
+    // let baseUrl = 'localhost:8080/ws';
+    // if (baseUrl.indexOf('//') > -1) {
+    //     baseUrl = baseUrl.substring(baseUrl.indexOf('//') + 2);
+    // }
+    // let webSocket = new WebSocket('ws://' + baseUrl + '/websocket/flowtask/' + 'aaaa');
+    // webSocket.onopen = () => {
+    //     console.log('websocket open');
+    // };
 </script>
